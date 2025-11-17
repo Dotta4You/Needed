@@ -1,0 +1,4 @@
+modules:
+  gamemode: true
+  weather: true
+  time: true

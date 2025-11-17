@@ -9,7 +9,7 @@ interface CommandBuilder {
 
     val children: List<CommandBuilder>
         get() = listOf()
-    
+
     val aliases: List<String>
         get() = listOf()
 

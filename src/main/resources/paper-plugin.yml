@@ -1,4 +1,5 @@
 name: Needed
 version: ${version}
+author: Doetchen
 main: de.doetchen.project.Needed
 api-version: '1.21'

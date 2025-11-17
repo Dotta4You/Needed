@@ -1,0 +1,14 @@
+gamemode:
+  changed: "<green>Spielmodus wurde zu <gold>{mode}</gold> geändert."
+  changed-other: "<green>Spielmodus von <gold>{player}</gold> wurde zu <gold>{mode}</gold> geändert."
+
+time:
+  day: "<green>Zeit wurde auf <gold>Tag</gold> gesetzt."
+  noon: "<green>Zeit wurde auf <gold>Mittag</gold> gesetzt."
+  night: "<green>Zeit wurde auf <gold>Nacht</gold> gesetzt."
+  midnight: "<green>Zeit wurde auf <gold>Mitternacht</gold> gesetzt."
+
+weather:
+  clear: "<green>Wetter wurde auf <gold>Klar</gold> gesetzt."
+  rainy: "<green>Wetter wurde auf <gold>Regen</gold> gesetzt."
+  thunder: "<green>Wetter wurde auf <gold>Gewitter</gold> gesetzt."

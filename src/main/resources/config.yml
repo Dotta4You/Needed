@@ -1,0 +1,6 @@
+settings:
+  language: "en"
+  prefix: "<gray>[<green>Needed</green>]</gray> "
+
+  sounds:
+    enabled: true
