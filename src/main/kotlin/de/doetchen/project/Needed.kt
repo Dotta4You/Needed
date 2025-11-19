@@ -1,8 +1,7 @@
 package de.doetchen.project
 
-import de.doetchen.project.commands.GameModeCommand
-import de.doetchen.project.commands.TimeCommand
-import de.doetchen.project.commands.WeatherCommand
+import de.doetchen.project.commands.registerCommands
+import de.doetchen.project.manager.CommandRegistry
 import de.doetchen.project.manager.LanguageManager
 import de.doetchen.project.manager.ModuleManager
 import io.papermc.paper.plugin.lifecycle.event.types.LifecycleEvents
@@ -16,33 +15,21 @@ class Needed : JavaPlugin() {
     lateinit var languageManager: LanguageManager
         private set
 
+    private lateinit var commandRegistry: CommandRegistry
+
     override fun onEnable() {
         saveDefaultConfig()
         moduleManager = ModuleManager(this)
         languageManager = LanguageManager(this)
+        commandRegistry = CommandRegistry(this)
 
         lifecycleManager.registerEventHandler(LifecycleEvents.COMMANDS) { event ->
-            val commands = event.registrar()
+        commandRegistry.registerCommands()
 
-            if (moduleManager.isModuleEnabled("gamemode")) {
-                val gmCommand = GameModeCommand(this)
-                commands.register(gmCommand.register(), gmCommand.description, gmCommand.aliases)
-            }
-
-            if (moduleManager.isModuleEnabled("weather")) {
-                val weatherCommand = WeatherCommand(this)
-                commands.register(weatherCommand.register(), weatherCommand.description)
-            }
-
-            if (moduleManager.isModuleEnabled("time")) {
-                val timeCommand = TimeCommand(this)
-                commands.register(timeCommand.register(), timeCommand.description)
-            }
-        }
         logger.info("Needed loaded!")
     }
 
-    override fun onDisable() {
+
         logger.info("Needed unloaded!")
     }
 }
