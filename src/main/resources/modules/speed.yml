@@ -1,0 +1,9 @@
+# Speed Module - Change movement speed
+enabled: true
+
+settings:
+  play-sound: true
+  min-speed: 0
+  max-speed: 10
+  default-speed: 1  # 1 = normal, 0 = no movement, 10 = very fast
+

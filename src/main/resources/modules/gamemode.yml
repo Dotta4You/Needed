@@ -1,0 +1,9 @@
+# GameMode Module - Change player gamemode
+enabled: true
+
+settings:
+  allow-self-change: true
+  allow-others-change: true
+  play-sound: true
+
+

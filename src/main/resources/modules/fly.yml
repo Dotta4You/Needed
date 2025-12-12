@@ -1,0 +1,9 @@
+# Fly Module - Toggle flight mode
+enabled: true
+
+settings:
+  play-sound: true
+  default-speed: 0.1  # 0.1 = normal, max 1.0
+  disable-on-damage: false
+  show-actionbar: true
+

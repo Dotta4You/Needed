@@ -1,0 +1,9 @@
+# Broadcast Module - Server-wide announcements
+enabled: true
+
+settings:
+  play-sound: true
+  broadcast-sound: ENTITY_PLAYER_LEVELUP
+  use-custom-prefix: true
+  custom-prefix: "<gradient:#ff0000:#ffff00>BROADCAST</gradient>"
+

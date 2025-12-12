@@ -1,0 +1,8 @@
+# Kick Module - Kick players from server
+enabled: true
+
+settings:
+  default-reason: "Kicked from server"
+  broadcast-kick: false
+  custom-kick-format: true
+

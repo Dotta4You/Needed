@@ -1,0 +1,9 @@
+# Vanish Module - Make players invisible
+enabled: true
+
+settings:
+  play-sound: true
+  hide-from-tablist: true
+  allow-interaction: true
+  show-actionbar: true
+

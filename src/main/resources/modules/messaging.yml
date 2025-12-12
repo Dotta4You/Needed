@@ -1,0 +1,8 @@
+# Messaging Module - Private messages
+enabled: true
+
+settings:
+  play-sound: true
+  allow-self-messaging: false
+  receive-sound: ENTITY_EXPERIENCE_ORB_PICKUP
+

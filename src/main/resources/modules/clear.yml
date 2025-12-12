@@ -1,0 +1,9 @@
+# Clear Module - Clear player inventories
+enabled: true
+
+settings:
+  play-sound: true
+  clear-armor: true
+  clear-offhand: true
+  require-confirmation: false
+

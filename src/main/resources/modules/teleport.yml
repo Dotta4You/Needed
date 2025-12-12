@@ -1,0 +1,9 @@
+# Teleport Module - Teleport to players
+enabled: true
+
+settings:
+  play-sound: true
+  cooldown: 0  # Seconds, 0 = no cooldown
+  show-particles: true
+  cross-world: true
+

@@ -1,0 +1,9 @@
+# Freeze Module - Freeze players in place
+enabled: true
+
+settings:
+  play-sound: true
+  prevent-chat: false
+  prevent-commands: false
+  show-actionbar: true
+

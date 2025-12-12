@@ -1,4 +1,4 @@
-package de.doetchen.project.extensions
+package de.doetchen.project.core.extensions
 
 import com.mojang.brigadier.tree.LiteralCommandNode
 import io.papermc.paper.command.brigadier.CommandSourceStack
@@ -16,3 +16,4 @@ interface CommandBuilder {
     val description: String
         get() = ""
 }
+

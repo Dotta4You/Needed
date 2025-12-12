@@ -12,3 +12,90 @@ weather:
   clear: "<green>Weather set to <gold>Clear</gold>."
   rainy: "<green>Weather set to <gold>Rainy</gold>."
   thunder: "<green>Weather set to <gold>Thunder</gold>."
+
+moderation:
+  vanish:
+    enabled: "<green>Vanish mode <gold>enabled</gold>."
+    disabled: "<green>Vanish mode <gold>disabled</gold>."
+    enabled-other: "<green>Vanish for <gold>{player}</gold> enabled."
+    disabled-other: "<green>Vanish for <gold>{player}</gold> disabled."
+
+  invsee:
+    opened: "<green>Opening inventory of <gold>{player}</gold>."
+
+  freeze:
+    enabled: "<green>Player <gold>{player}</gold> has been frozen."
+    disabled: "<green>Player <gold>{player}</gold> has been unfrozen."
+    frozen: "<red><bold>You have been frozen!</bold> <gray>Please wait for staff."
+    unfrozen: "<green>You have been unfrozen!"
+    actionbar:
+      frozen: "FROZEN"
+      unfrozen: "Unfrozen"
+      movement: "You are frozen!"
+
+  fly:
+    enabled: "<green>Flight mode <gold>enabled</gold>."
+    disabled: "<green>Flight mode <gold>disabled</gold>."
+    enabled-other: "<green>Flight mode for <gold>{player}</gold> enabled."
+    disabled-other: "<green>Flight mode for <gold>{player}</gold> disabled."
+    actionbar:
+      enabled: "Flight Mode"
+      disabled: "Flight Mode"
+
+  god:
+    enabled: "<green>God mode <gold>enabled</gold>."
+    disabled: "<green>God mode <gold>disabled</gold>."
+    enabled-other: "<green>God mode for <gold>{player}</gold> enabled."
+    disabled-other: "<green>God mode for <gold>{player}</gold> disabled."
+    actionbar:
+      enabled: "God Mode"
+      disabled: "God Mode"
+
+  heal:
+    healed: "<green>You have been <gold>healed</gold>."
+    healed-other: "<green>Player <gold>{player}</gold> has been healed."
+
+  feed:
+    fed: "<green>You have been <gold>fed</gold>."
+    fed-other: "<green>Player <gold>{player}</gold> has been fed."
+
+  tp:
+    teleported: "<green>You have been teleported to <gold>{player}</gold>."
+    teleported-other: "<green>Player <gold>{player}</gold> has been teleported to <gold>{destination}</gold>."
+
+  tphere:
+    teleported: "<green>You have been teleported to <gold>{player}</gold>."
+    summoned: "<green>Player <gold>{player}</gold> has been teleported to you."
+
+  speed:
+    changed: "<green>Speed changed to <gold>{speed}</gold>."
+    changed-other: "<green>Speed of <gold>{player}</gold> changed to <gold>{speed}</gold>."
+
+  clear:
+    cleared: "<green>Your inventory has been <gold>cleared</gold>."
+    cleared-other: "<green>Inventory of <gold>{player}</gold> has been cleared."
+
+  kick:
+    kicked: "<green>Player <gold>{player}</gold> has been kicked."
+    kicked-reason: "<green>Player <gold>{player}</gold> has been kicked. Reason: <gold>{reason}</gold>"
+
+  broadcast:
+    sent: "<green>Broadcast successfully sent."
+
+message:
+  format-sender: "<gray>[<gold>You</gold> → <gold>{player}</gold>]</gray> <white>{message}</white>"
+  format-receiver: "<gray>[<gold>{player}</gold> → <gold>You</gold>]</gray> <white>{message}</white>"
+  player-not-found: "<red>Player not found."
+  cannot-message-yourself: "<red>You cannot message yourself."
+  no-conversation: "<red>You have no active conversation. Use /msg <player> <message>."
+  player-offline: "<red>The player is no longer online."
+
+reload:
+  starting: "<yellow>Reloading plugin..."
+  config: "<green>✓</green> <gray>Config reloaded"
+  language: "<green>✓</green> <gray>Language files reloaded"
+  modules: "<green>✓</green> <gray>Modules reloaded"
+  conversations: "<green>✓</green> <gray>Conversations cleared"
+  success: "<green><bold>Plugin reloaded successfully!</bold></green> <gray>({time}ms)"
+  error: "<red><bold>Error during reload:</bold></red> <gray>{error}"
+

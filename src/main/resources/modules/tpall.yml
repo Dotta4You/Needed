@@ -1,0 +1,7 @@
+# TeleportAll Module - Teleport all players to a location
+enabled: true
+
+settings:
+  play-sound: true
+  # Sound effect when teleporting players
+

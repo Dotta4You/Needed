@@ -1,9 +1,9 @@
-package de.doetchen.project.commands
+package de.doetchen.project.features.basic
 
 import com.mojang.brigadier.arguments.StringArgumentType
 import com.mojang.brigadier.tree.LiteralCommandNode
 import de.doetchen.project.Needed
-import de.doetchen.project.extensions.CommandBuilder
+import de.doetchen.project.core.extensions.CommandBuilder
 import io.papermc.paper.command.brigadier.CommandSourceStack
 import io.papermc.paper.command.brigadier.Commands
 import net.kyori.adventure.text.Component
@@ -82,9 +82,10 @@ class WeatherCommand(private val plugin: Needed) : CommandBuilder {
                                     .append(plugin.languageManager.getMessage("weather.thunder"))
                                 player.sendMessage(message)
 
+                                val actionBarText = plugin.languageManager.getMessage("weather.actionbar.thunder")
                                 val actionBar = Component.text()
                                     .append(Component.text("⚡ ", NamedTextColor.WHITE))
-                                    .append(Component.text("Thunder", NamedTextColor.DARK_PURPLE, TextDecoration.BOLD))
+                                    .append(actionBarText.color(NamedTextColor.DARK_PURPLE).decorate(TextDecoration.BOLD))
                                     .append(Component.text(" ⚡", NamedTextColor.WHITE))
                                     .build()
                                 player.sendActionBar(actionBar)
@@ -98,9 +99,7 @@ class WeatherCommand(private val plugin: Needed) : CommandBuilder {
             .build()
     }
 
-    override val aliases: List<String>
-        get() = listOf("w")
-
-    override val description: String
-        get() = "Change weather"
+    override val aliases = listOf("w")
+    override val description = "Change weather"
 }
+

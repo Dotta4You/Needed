@@ -1,0 +1,7 @@
+# Time Module - Control time of day
+enabled: true
+
+settings:
+  play-sound: true
+
+

@@ -1,9 +1,9 @@
-package de.doetchen.project.manager
+package de.doetchen.project.core.manager
 
 import de.doetchen.project.Needed
-import de.doetchen.project.extensions.CommandBuilder
-import io.papermc.paper.plugin.lifecycle.event.registrar.ReloadableRegistrarEvent
+import de.doetchen.project.core.extensions.CommandBuilder
 import io.papermc.paper.command.brigadier.Commands
+import io.papermc.paper.plugin.lifecycle.event.registrar.ReloadableRegistrarEvent
 
 class CommandRegistry(private val plugin: Needed) {
 
@@ -29,7 +29,6 @@ class CommandRegistry(private val plugin: Needed) {
             try {
                 val command = registration.builder(plugin)
                 registrar.register(command.register(), command.description, command.aliases)
-                plugin.logger.info("✓ Registered command from ${command::class.simpleName}")
             } catch (e: Exception) {
                 plugin.logger.severe("✗ Failed to register command: ${e.message}")
             }
@@ -41,3 +40,4 @@ class CommandRegistry(private val plugin: Needed) {
         val builder: (Needed) -> CommandBuilder
     )
 }
+

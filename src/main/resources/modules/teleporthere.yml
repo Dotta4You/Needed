@@ -1,0 +1,8 @@
+# TeleportHere Module - Summon players to you
+enabled: true
+
+settings:
+  play-sound: true
+  show-particles: true
+  notify-target: true
+

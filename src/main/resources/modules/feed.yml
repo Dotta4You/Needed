@@ -1,0 +1,8 @@
+# Feed Module - Feed players
+enabled: true
+
+settings:
+  play-sound: true
+  food-level: 20
+  saturation-level: 20.0
+

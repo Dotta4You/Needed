@@ -1,6 +1,19 @@
-settings:
-  language: "en"
-  prefix: "<gray>[<green>Needed</green>]</gray> "
+# Needed Plugin - Main Configuration
 
+# Plugin settings
+settings:
+  # Message prefix displayed before all plugin messages
+  prefix: "<gray>[<gradient:#00ff87:#60efff>Needed</gradient>]</gray> "
+
+  # Language setting (en, de)
+  language: en
+
+  # Enable update checker
+  enable-update-checker: true
+
+  # Enable bStats metrics
+  enable-metrics: true
+
+  # Sound settings
   sounds:
     enabled: true

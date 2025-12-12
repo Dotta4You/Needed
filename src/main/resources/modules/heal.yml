@@ -1,0 +1,10 @@
+# Heal Module - Heal players
+enabled: true
+
+settings:
+  play-sound: true
+  restore-health: true
+  restore-food: true
+  remove-effects: true
+  extinguish-fire: true
+

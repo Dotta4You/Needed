@@ -1,0 +1,7 @@
+# Invsee Module - View player inventories
+enabled: true
+
+settings:
+  play-sound: true
+  allow-editing: true
+  show-equipment: true

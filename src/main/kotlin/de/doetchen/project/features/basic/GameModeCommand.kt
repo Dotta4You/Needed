@@ -1,9 +1,9 @@
-package de.doetchen.project.commands
+package de.doetchen.project.features.basic
 
 import com.mojang.brigadier.arguments.StringArgumentType
 import com.mojang.brigadier.tree.LiteralCommandNode
 import de.doetchen.project.Needed
-import de.doetchen.project.extensions.CommandBuilder
+import de.doetchen.project.core.extensions.CommandBuilder
 import io.papermc.paper.command.brigadier.CommandSourceStack
 import io.papermc.paper.command.brigadier.Commands
 import io.papermc.paper.command.brigadier.argument.ArgumentTypes
@@ -45,11 +45,19 @@ class GameModeCommand(private val plugin: Needed) : CommandBuilder {
                     }
                     .then(
                         Commands.argument("target", ArgumentTypes.player())
+                            .suggests { _, builder ->
+                                plugin.server.onlinePlayers.forEach { builder.suggest(it.name) }
+                                builder.buildFuture()
+                            }
                             .requires { it.sender.hasPermission("needed.gamemode.other") }
                             .executes { context ->
                                 val sender = context.source.sender as Player
                                 val modeInput = StringArgumentType.getString(context, "mode")
-                                val target = context.getArgument("target", Player::class.java)
+                                val target = context.getArgument("target",
+                                    io.papermc.paper.command.brigadier.argument.resolvers.selector.PlayerSelectorArgumentResolver::class.java
+                                ).resolve(context.source).firstOrNull()
+
+                                if (target == null) return@executes 0
 
                                 val gameMode = parseGameMode(modeInput) ?: return@executes 0
 
@@ -90,9 +98,7 @@ class GameModeCommand(private val plugin: Needed) : CommandBuilder {
         }
     }
 
-    override val aliases: List<String>
-        get() = listOf("gamemode")
-
-    override val description: String
-        get() = "Change gamemode"
+    override val aliases = listOf("gamemode")
+    override val description = "Change gamemode"
 }
+

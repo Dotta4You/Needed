@@ -1,9 +1,9 @@
-package de.doetchen.project.commands
+package de.doetchen.project.features.basic
 
 import com.mojang.brigadier.arguments.StringArgumentType
 import com.mojang.brigadier.tree.LiteralCommandNode
 import de.doetchen.project.Needed
-import de.doetchen.project.extensions.CommandBuilder
+import de.doetchen.project.core.extensions.CommandBuilder
 import io.papermc.paper.command.brigadier.CommandSourceStack
 import io.papermc.paper.command.brigadier.Commands
 import net.kyori.adventure.text.Component
@@ -94,9 +94,10 @@ class TimeCommand(private val plugin: Needed) : CommandBuilder {
                                     .append(plugin.languageManager.getMessage("time.midnight"))
                                 player.sendMessage(message)
 
+                                val actionBarText = plugin.languageManager.getMessage("time.actionbar.midnight")
                                 val actionBar = Component.text()
                                     .append(Component.text("☾ ", NamedTextColor.DARK_GRAY))
-                                    .append(Component.text("Midnight", NamedTextColor.DARK_PURPLE, TextDecoration.BOLD))
+                                    .append(actionBarText.color(NamedTextColor.DARK_PURPLE).decorate(TextDecoration.BOLD))
                                     .append(Component.text(" ☾", NamedTextColor.DARK_GRAY))
                                     .build()
                                 player.sendActionBar(actionBar)
@@ -110,6 +111,6 @@ class TimeCommand(private val plugin: Needed) : CommandBuilder {
             .build()
     }
 
-    override val description: String
-        get() = "Change time"
+    override val description = "Change time"
 }
+

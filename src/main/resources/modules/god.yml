@@ -1,0 +1,9 @@
+# God Mode Module - Toggle invincibility
+enabled: true
+
+settings:
+  play-sound: true
+  prevent-all-damage: true
+  prevent-hunger: true
+  show-actionbar: true
+

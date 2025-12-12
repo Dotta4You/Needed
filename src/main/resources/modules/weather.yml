@@ -1,0 +1,8 @@
+# Weather Module - Control server weather
+enabled: true
+
+settings:
+  weather-duration: 999999  # Permanent until changed
+  play-sound: true
+
+

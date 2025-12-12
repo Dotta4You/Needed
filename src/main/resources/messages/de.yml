@@ -12,3 +12,90 @@ weather:
   clear: "<green>Wetter wurde auf <gold>Klar</gold> gesetzt."
   rainy: "<green>Wetter wurde auf <gold>Regen</gold> gesetzt."
   thunder: "<green>Wetter wurde auf <gold>Gewitter</gold> gesetzt."
+
+moderation:
+  vanish:
+    enabled: "<green>Vanish wurde <gold>aktiviert</gold>."
+    disabled: "<green>Vanish wurde <gold>deaktiviert</gold>."
+    enabled-other: "<green>Vanish für <gold>{player}</gold> wurde aktiviert."
+    disabled-other: "<green>Vanish für <gold>{player}</gold> wurde deaktiviert."
+
+  invsee:
+    opened: "<green>Inventar von <gold>{player}</gold> wird angezeigt."
+
+  freeze:
+    enabled: "<green>Spieler <gold>{player}</gold> wurde eingefroren."
+    disabled: "<green>Spieler <gold>{player}</gold> wurde entfroren."
+    frozen: "<red><bold>Du wurdest eingefroren!</bold> <gray>Bitte warte auf einen Teammitglied."
+    unfrozen: "<green>Du wurdest entfroren!"
+    actionbar:
+      frozen: "EINGEFROREN"
+      unfrozen: "Entfroren"
+      movement: "Du bist eingefroren!"
+
+  fly:
+    enabled: "<green>Flugmodus <gold>aktiviert</gold>."
+    disabled: "<green>Flugmodus <gold>deaktiviert</gold>."
+    enabled-other: "<green>Flugmodus für <gold>{player}</gold> aktiviert."
+    disabled-other: "<green>Flugmodus für <gold>{player}</gold> deaktiviert."
+    actionbar:
+      enabled: "Flugmodus"
+      disabled: "Flugmodus"
+
+  god:
+    enabled: "<green>God-Modus <gold>aktiviert</gold>."
+    disabled: "<green>God-Modus <gold>deaktiviert</gold>."
+    enabled-other: "<green>God-Modus für <gold>{player}</gold> aktiviert."
+    disabled-other: "<green>God-Modus für <gold>{player}</gold> deaktiviert."
+    actionbar:
+      enabled: "God-Modus"
+      disabled: "God-Modus"
+
+  heal:
+    healed: "<green>Du wurdest <gold>geheilt</gold>."
+    healed-other: "<green>Spieler <gold>{player}</gold> wurde geheilt."
+
+  feed:
+    fed: "<green>Du wurdest <gold>gesättigt</gold>."
+    fed-other: "<green>Spieler <gold>{player}</gold> wurde gesättigt."
+
+  tp:
+    teleported: "<green>Du wurdest zu <gold>{player}</gold> teleportiert."
+    teleported-other: "<green>Spieler <gold>{player}</gold> wurde zu <gold>{destination}</gold> teleportiert."
+
+  tphere:
+    teleported: "<green>Du wurdest zu <gold>{player}</gold> teleportiert."
+    summoned: "<green>Spieler <gold>{player}</gold> wurde zu dir teleportiert."
+
+  speed:
+    changed: "<green>Geschwindigkeit wurde auf <gold>{speed}</gold> gesetzt."
+    changed-other: "<green>Geschwindigkeit von <gold>{player}</gold> wurde auf <gold>{speed}</gold> gesetzt."
+
+  clear:
+    cleared: "<green>Dein Inventar wurde <gold>geleert</gold>."
+    cleared-other: "<green>Inventar von <gold>{player}</gold> wurde geleert."
+
+  kick:
+    kicked: "<green>Spieler <gold>{player}</gold> wurde gekickt."
+    kicked-reason: "<green>Spieler <gold>{player}</gold> wurde gekickt. Grund: <gold>{reason}</gold>"
+
+  broadcast:
+    sent: "<green>Broadcast wurde erfolgreich gesendet."
+
+message:
+  format-sender: "<gray>[<gold>Du</gold> → <gold>{player}</gold>]</gray> <white>{message}</white>"
+  format-receiver: "<gray>[<gold>{player}</gold> → <gold>Du</gold>]</gray> <white>{message}</white>"
+  player-not-found: "<red>Spieler nicht gefunden."
+  cannot-message-yourself: "<red>Du kannst dir nicht selbst schreiben."
+  no-conversation: "<red>Du hast keine aktive Konversation. Nutze /msg <spieler> <nachricht>."
+  player-offline: "<red>Der Spieler ist nicht mehr online."
+
+reload:
+  starting: "<yellow>Plugin wird neu geladen..."
+  config: "<green>✓</green> <gray>Config neu geladen"
+  language: "<green>✓</green> <gray>Sprachdateien neu geladen"
+  modules: "<green>✓</green> <gray>Module neu geladen"
+  conversations: "<green>✓</green> <gray>Konversationen gelöscht"
+  success: "<green><bold>Plugin erfolgreich neu geladen!</bold></green> <gray>({time}ms)"
+  error: "<red><bold>Fehler beim Neuladen:</bold></red> <gray>{error}"
+
