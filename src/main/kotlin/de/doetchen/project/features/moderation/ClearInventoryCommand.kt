@@ -6,6 +6,7 @@ import de.doetchen.project.core.extensions.CommandBuilder
 import io.papermc.paper.command.brigadier.CommandSourceStack
 import io.papermc.paper.command.brigadier.Commands
 import io.papermc.paper.command.brigadier.argument.ArgumentTypes
+import io.papermc.paper.command.brigadier.argument.resolvers.selector.PlayerSelectorArgumentResolver
 import org.bukkit.Sound
 import org.bukkit.entity.Player
 
@@ -29,7 +30,7 @@ class ClearInventoryCommand(private val plugin: Needed) : CommandBuilder {
                     .executes { context ->
                         val sender = context.source.sender as Player
                         val target = context.getArgument("target",
-                            io.papermc.paper.command.brigadier.argument.resolvers.selector.PlayerSelectorArgumentResolver::class.java
+                            PlayerSelectorArgumentResolver::class.java
                         ).resolve(context.source).firstOrNull()
                         if (target != null) clearInventory(sender, target)
                         1
